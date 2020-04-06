@@ -7,6 +7,7 @@ const siteContent = {
     "nav-item-5": "About",
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
+    
   },
   "cta": {
     "h1": "DOM Is Awesome",
@@ -37,6 +38,40 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+// LOGO IMAGE
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+// ADDING 2 THINGS TO THE NAV AND NAMING NAV
+const navSection = document.querySelector("nav");
+let newLinka = document.createElement("a")
+newLinka.textContent = "Enter"
+let newLinkb = document.createElement("a")
+newLinkb.textContent = "Exit"
+navSection.prepend(newLinka);
+navSection.appendChild(newLinkb);
+let navTxt = document.querySelectorAll("a");
+
+
+// NAV TEXT
+navTxt[1].textContent = siteContent["nav"]["nav-item-1"]
+navTxt[2].textContent = siteContent["nav"]["nav-item-2"]
+navTxt[3].textContent = siteContent["nav"]["nav-item-3"]
+navTxt[4].textContent = siteContent["nav"]["nav-item-4"]
+navTxt[5].textContent = siteContent["nav"]["nav-item-5"]
+
+
+//HEADING WORDS
+let heading = document.querySelector("cta");
+
+
+
+
+// CIRCLE IMAGE 
+let front = document.getElementById("cta-img");
+front.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//WIDE IMAGE
+let wide = document.getElementById("middle-img");
+wide.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
