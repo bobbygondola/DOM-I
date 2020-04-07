@@ -52,7 +52,9 @@ newLinkb.textContent = "Exit"
 navSection.prepend(newLinka);
 navSection.appendChild(newLinkb);
 let navTxt = document.querySelectorAll("a");
+const nav = document.querySelectorAll("nav a");
 
+nav.forEach(element => element.style.color = "green");
 
 // NAV TEXT
 navTxt[1].textContent = siteContent["nav"]["nav-item-1"]
@@ -91,22 +93,44 @@ about_H4.innerText = siteContent['main-content']['about-h4'];
 let aboutContent_1 = document.getElementsByTagName('p')[1];
 aboutContent_1.innerText = siteContent['main-content']['about-content'];
 
-// let aboutt = document.querySelector(".text-content h4");
-// aboutt.textContent = siteContent["main-content"]["about-h4"];
-
-
-
 
 //WIDE IMAGE
 let wide = document.getElementById("middle-img");
 wide.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 
-//FOOTER
+// Below features Section
 
-// const footer = document.getElementsByClassName('contact h4');
-// footer.textContent = siteContent['contact']['contact-h4'];
+let services_H4 = document.getElementsByTagName('h4')[2];
+services_H4.innerText = siteContent['main-content']['services-h4'];
 
+let servicesContent = document.getElementsByTagName('p')[2];
+servicesContent.innerText = siteContent['main-content']['services-content'];
 
+let product_H4 = document.getElementsByTagName('h4')[3];
+product_H4.innerText = siteContent['main-content']['product-h4'];
 
-//COPYRIGHT
+let productContent = document.getElementsByTagName('p')[3];
+productContent.innerText = siteContent['main-content']['product-content'];
+
+let vision_H4 = document.getElementsByTagName('h4')[4];
+vision_H4.innerText = siteContent['main-content']['vision-h4'];
+
+let visionContent = document.getElementsByTagName('p')[4];
+visionContent.innerText = siteContent['main-content']['vision-content'];
+
+//Contact
+
+let contact_H4 = document.getElementsByTagName('h4')[5];
+contact_H4.innerText = siteContent['contact']['contact-h4'];
+let address = document.getElementsByTagName('p')[5];
+address.innerText = siteContent['contact']['address'];
+let phone = document.getElementsByTagName('p')[6];
+phone.innerText = siteContent['contact']['phone'];
+let email = document.getElementsByTagName('p')[7];
+email.innerText = siteContent['contact']['email'];
+
+//footer
+let footer = document.getElementsByTagName('p')[8];
+footer.innerText = siteContent['footer']['copyright'];
+
