@@ -67,17 +67,35 @@ navTxt[5].textContent = siteContent["nav"]["nav-item-5"]
 const word1 = document.querySelector('.cta-text h1');
 word1.textContent = siteContent['cta']['h1'];
 
-
-
-
-
-
-
+const word2 = document.querySelector('.cta-text button');
+word2.textContent = siteContent['cta']['button'];
 
 
 // CIRCLE IMAGE 
 let front = document.getElementById("cta-img");
 front.setAttribute("src", siteContent["cta"]["img-src"]);
+
+
+
+
+//Featured Section 
+let featuresH4 = document.getElementsByTagName('h4')[0];
+featuresH4.innerText = siteContent['main-content']['features-h4'];
+
+let featuresContent = document.getElementsByTagName('p')[0];
+featuresContent.innerText = siteContent['main-content']['features-content'];
+
+let about_H4 = document.getElementsByTagName('h4')[1];
+about_H4.innerText = siteContent['main-content']['about-h4'];
+
+let aboutContent_1 = document.getElementsByTagName('p')[1];
+aboutContent_1.innerText = siteContent['main-content']['about-content'];
+
+// let aboutt = document.querySelector(".text-content h4");
+// aboutt.textContent = siteContent["main-content"]["about-h4"];
+
+
+
 
 //WIDE IMAGE
 let wide = document.getElementById("middle-img");
@@ -86,8 +104,8 @@ wide.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 //FOOTER
 
-// const footer = document.getElementsByClassName('contact')
-// footer.textContent = siteContent('"contact"')
+// const footer = document.getElementsByClassName('contact h4');
+// footer.textContent = siteContent['contact']['contact-h4'];
 
 
 
