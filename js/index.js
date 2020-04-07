@@ -53,7 +53,7 @@ navSection.prepend(newLinka);
 navSection.appendChild(newLinkb);
 let navTxt = document.querySelectorAll("a");
 const nav = document.querySelectorAll("nav a");
-
+//Color the NAV
 nav.forEach(element => element.style.color = "green");
 
 // NAV TEXT
@@ -80,57 +80,39 @@ front.setAttribute("src", siteContent["cta"]["img-src"]);
 
 
 
-//Featured Section 
-let featuresH4 = document.getElementsByTagName('h4')[0];
-featuresH4.innerText = siteContent['main-content']['features-h4'];
-
-let featuresContent = document.getElementsByTagName('p')[0];
-featuresContent.innerText = siteContent['main-content']['features-content'];
-
-let about_H4 = document.getElementsByTagName('h4')[1];
-about_H4.innerText = siteContent['main-content']['about-h4'];
-
-let aboutContent_1 = document.getElementsByTagName('p')[1];
-aboutContent_1.innerText = siteContent['main-content']['about-content'];
+//Featured Section/ Middle Sec
+const sectionHeaders = document.querySelectorAll(".main-content h4");
+sectionHeaders[0].textContent = siteContent["main-content"]["features-h4"]
+sectionHeaders[1].textContent = siteContent["main-content"]["about-h4"]
+sectionHeaders[2].textContent = siteContent["main-content"]["services-h4"]
+sectionHeaders[3].textContent = siteContent["main-content"]["product-h4"]
+sectionHeaders[4].textContent = siteContent["main-content"]["vision-h4"]
 
 
 //WIDE IMAGE
 let wide = document.getElementById("middle-img");
 wide.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
+//Features Section Bottom
+const sectionContent = document.querySelectorAll(".main-content p");
+sectionContent[0].textContent = siteContent["main-content"]["features-content"];
+sectionContent[1].textContent = siteContent["main-content"]["about-content"];
+sectionContent[2].textContent = siteContent["main-content"]["services-content"];
+sectionContent[3].textContent = siteContent["main-content"]["product-content"];
+sectionContent[4].textContent = siteContent["main-content"]["vision-content"];
 
-// Below features Section
-
-let services_H4 = document.getElementsByTagName('h4')[2];
-services_H4.innerText = siteContent['main-content']['services-h4'];
-
-let servicesContent = document.getElementsByTagName('p')[2];
-servicesContent.innerText = siteContent['main-content']['services-content'];
-
-let product_H4 = document.getElementsByTagName('h4')[3];
-product_H4.innerText = siteContent['main-content']['product-h4'];
-
-let productContent = document.getElementsByTagName('p')[3];
-productContent.innerText = siteContent['main-content']['product-content'];
-
-let vision_H4 = document.getElementsByTagName('h4')[4];
-vision_H4.innerText = siteContent['main-content']['vision-h4'];
-
-let visionContent = document.getElementsByTagName('p')[4];
-visionContent.innerText = siteContent['main-content']['vision-content'];
 
 //Contact
 
-let contact_H4 = document.getElementsByTagName('h4')[5];
-contact_H4.innerText = siteContent['contact']['contact-h4'];
-let address = document.getElementsByTagName('p')[5];
-address.innerText = siteContent['contact']['address'];
-let phone = document.getElementsByTagName('p')[6];
-phone.innerText = siteContent['contact']['phone'];
-let email = document.getElementsByTagName('p')[7];
-email.innerText = siteContent['contact']['email'];
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent.contact["contact-h4"];
+
+const contactContent = document.querySelectorAll(".contact p");
+contactContent[0].textContent = siteContent.contact["address"];
+contactContent[1].textContent = siteContent.contact["phone"];
+contactContent[2].textContent = siteContent.contact["email"];
 
 //footer
-let footer = document.getElementsByTagName('p')[8];
-footer.innerText = siteContent['footer']['copyright'];
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent.footer["copyright"];
 
