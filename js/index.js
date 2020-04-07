@@ -62,8 +62,15 @@ navTxt[4].textContent = siteContent["nav"]["nav-item-4"]
 navTxt[5].textContent = siteContent["nav"]["nav-item-5"]
 
 
-//HEADING WORDS
-let heading = document.querySelector("cta");
+
+// //HEADING WORDS
+const word1 = document.querySelector('.cta-text h1');
+word1.textContent = siteContent['cta']['h1'];
+
+
+
+
+
 
 
 
@@ -75,3 +82,13 @@ front.setAttribute("src", siteContent["cta"]["img-src"]);
 //WIDE IMAGE
 let wide = document.getElementById("middle-img");
 wide.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+//FOOTER
+
+// const footer = document.getElementsByClassName('contact')
+// footer.textContent = siteContent('"contact"')
+
+
+
+//COPYRIGHT
